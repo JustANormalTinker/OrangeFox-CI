@@ -31,7 +31,9 @@ fi
 if [ -z "$SYNC_BRANCH" ]; then
     export SYNC_BRANCH=$(echo ${FOX_BRANCH} | cut -d_ -f2)
 fi
-
+rm -rf orangefox_sync.sh
+wget https://gitlab.com/OrangeFox/sync/-/raw/ffa84573119b278f739c96b7f4d19ab11666dc1e/orangefox_sync.sh
+chmod +x orangefox_sync.sh
 # Sync the Sources
 bash orangefox_sync.sh --branch $SYNC_BRANCH --path $SYNC_PATH || { echo "ERROR: Failed to Sync OrangeFox Sources!" && exit 1; }
 
