@@ -29,6 +29,7 @@ export EXTRA_CMD="export OF_MAINTAINER=Sushrut1101"
 export OF_USE_LATEST_MAGISK=true
 
 # Not Recommended to Change
+mkdir $HOME/work
 export SYNC_PATH="$HOME/work" # Full (absolute) path.
 export USE_CCACHE=1
 export CCACHE_SIZE="50G"
